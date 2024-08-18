@@ -1,0 +1,75 @@
+nav {
+    display: flex;
+    border-bottom: 2px solid #f3f3f3;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    z-index: 999;
+    margin-left: 2rem;
+}
+
+input {
+    padding: 12px 20px;
+    border: none;
+    background: #f7f6f6;
+    outline: none;
+    margin-right: 20px;
+    border-radius: 5px;
+    position: relative;
+    width: 14rem;
+}
+
+.nav-icons {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 2rem;
+    color: black;
+}
+
+/* Responsive styles for phone */
+@media screen and (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-icons {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Responsive styles for laptop and desktop */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    nav {
+        margin-left: 1rem;
+    }
+
+    input {
+        width: 12rem;
+    }
+
+    .nav-icons {
+        margin-left: 1rem;
+    }
+}
+
+/* Additional styles for larger desktop screens */
+@media screen and (min-width: 1201px) {
+    nav {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input {
+        width: 16rem;
+    }
+}

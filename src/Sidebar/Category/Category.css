@@ -1,0 +1,126 @@
+.category-container{
+    position: relative;
+    top: -12px;
+}
+.sidebar-title{
+    font-size:22px;
+    font-weight:normal;
+    margin-bottom:20px;
+  }
+  
+  .sidebar-label-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .sidebar-label-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkMark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #f3b7b7;
+    border-radius: 50%;
+  }
+  
+  .sidebar-label-container:hover input ~ .checkMark {
+    background-color: #ccc;
+  }
+  
+  .sidebar-label-container input:checked ~ .checkMark {
+    background-color: #7455f0;
+  }
+  
+  .checkMark::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .sidebar-label-container input:checked ~ .checkMark::after {
+    display: block;
+  }
+  
+  .sidebar-label-container .checkMark::after {
+    top: 6.4px;
+    left: 6.4px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  .line {
+    margin-top: 3rem;
+    border-color: #f7f7f7;
+  }
+  
+  /* Responsive styles */
+  
+  /* Phone (up to 767px) */
+  @media screen and (max-width: 767px) {
+    .sidebar-title {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  
+    .sidebar-label-container {
+      padding-left: 30px;
+      margin-bottom: 10px;
+    }
+  
+    .checkMark {
+      height: 18px;
+      width: 18px;
+    }
+  
+    .sidebar-label-container .checkMark::after {
+      top: 5.4px;
+      left: 5.4px;
+      width: 6px;
+      height: 6px;
+    }
+  }
+  
+  /* Laptop (768px to 1023px) */
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .sidebar-title {
+      font-size: 20px;
+    }
+  }
+  
+  /* Desktop (1024px and above) */
+  @media screen and (min-width: 1024px) {
+    .sidebar-title {
+      font-size: 24px;
+    }
+  
+    .sidebar-label-container {
+      padding-left: 40px;
+    }
+  
+    .checkMark {
+      height: 22px;
+      width: 22px;
+    }
+  
+    .sidebar-label-container .checkMark::after {
+      top: 7px;
+      left: 7px;
+      width: 8px;
+      height: 8px;
+    }
+  }
